@@ -21,6 +21,8 @@ printf("\nEntered Data : %s", data);printf("\nCRC-CCITT    : %04X", crc);return 
 }
 
 # OUTPUT:
+
 <img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/aa45f763-ffee-4611-86ff-e2cecfaa53fb" /> 
+
 # RESULT:
 Thus the error detection using CRC-CCITT[16 bit] technique is implemented and the output is obtained and verified successfully.
