@@ -11,31 +11,10 @@ To write a program for error Detection using Cyclic Redundancy Check (CRC-16 bit
 # PROGRAM:
 #include <stdio.h>
 #include <string.h>
-unsigned short crc_ccitt(unsigned char *data, int length)
-{
-    unsigned short crc = 0xFFFF;
-    for(int i = 0; i < length; i++)
-    {
-        crc ^= (unsigned short)data[i] << 8;
-        for(int j = 0; j < 8; j++)
-        {
-            if(crc & 0x8000)
-                crc = (crc << 1) ^ 0x1021;
-            else
-                crc = crc << 1;
-        }
-    }
-    return crc;
-}
-int main()
-{
-    char data[100];
-    printf("Enter data: ");
-    scanf("%s", data);
-    unsigned short crc = crc_ccitt((unsigned char*)data, strlen(data));
-    printf("\nEntered Data : %s", data);
-    printf("\nCRC-CCITT    : %04X", crc);
-    return 0;
+unsigned short crc_ccitt(unsigned char *data, int length)//{unsigned short crc = 0xFFFF;for(int i = 0; i < length; i++){
+crc ^= (unsigned short)data[i] << 8;//for(int j = 0; j < 8; j++){if(crc & 0x8000) crc = (crc << 1) ^ 0x1021;//elsecrc = crc << 1;}}//
+return crc;}//int main()//{char data[100];printf("Enter data: ");scanf("%s", data);unsigned short crc = crc_ccitt((unsigned char*)data, strlen(data));
+printf("\nEntered Data : %s", data);printf("\nCRC-CCITT    : %04X", crc);return 0;
 }
 # OUTPUT:
 <img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/aa45f763-ffee-4611-86ff-e2cecfaa53fb" /> 
