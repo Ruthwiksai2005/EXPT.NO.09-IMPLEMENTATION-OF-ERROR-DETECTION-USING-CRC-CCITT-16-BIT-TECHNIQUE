@@ -51,6 +51,7 @@ printf("no error detected");
 }
  
 # OUTPUT:
+![Uploading image.png…]()
 
 
 # RESULT:
